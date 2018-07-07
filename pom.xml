@@ -85,6 +85,7 @@ classpath and a new generator will be available for javafx.scene.image.Image obj
 	</dependencies>
 	<profiles>
 		<profile>
+			<id>swt-linux-amd64</id>
 			<activation>
 				<os>
 					<arch>amd64</arch>
@@ -100,6 +101,7 @@ classpath and a new generator will be available for javafx.scene.image.Image obj
 			</dependencies>
 		</profile>
 		<profile>
+			<id>swt-linux-x86</id>
 			<activation>
 				<os>
 					<arch>x86</arch>
@@ -115,6 +117,7 @@ classpath and a new generator will be available for javafx.scene.image.Image obj
 			</dependencies>
 		</profile>
 		<profile>
+			<id>swt-windows-amd64</id>
 			<activation>
 				<os>
 					<arch>amd64</arch>
@@ -130,6 +133,7 @@ classpath and a new generator will be available for javafx.scene.image.Image obj
 			</dependencies>
 		</profile>
 		<profile>
+			<id>swt-windows-x86</id>
 			<activation>
 				<os>
 					<arch>x86</arch>
@@ -145,6 +149,7 @@ classpath and a new generator will be available for javafx.scene.image.Image obj
 			</dependencies>
 		</profile>
 		<profile>
+			<id>swt-mac-amd64</id>
 			<activation>
 				<os>
 					<arch>amd64</arch>
