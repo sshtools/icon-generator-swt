@@ -41,7 +41,8 @@ Then when you have an IconBuilder instance, use the following to generate
 an SWT image. 
 
 ```java
-Image swtImage  = builder.build(Image.class);
+// You need to pass in an instance of Display as an argument for SWT 
+Image swtImage  = builder.build(Image.class, Display.getDefault());
 // Do something with swtImage 
 
 ```
