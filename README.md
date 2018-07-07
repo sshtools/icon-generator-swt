@@ -1,5 +1,5 @@
 # icon-generator-swt
-An add-on for icon-generator library for generating icons in Java and SWT.
+An add-on for the [icon-generator](https://github.com/sshtools/icon-generator) library for generating icons in Java and SWT.
 
 This is made available as an add-on due to there being no reliable Maven artifacts in 
 Maven Central, so we used 3rd party SWT libraries and make this add-on available
@@ -15,9 +15,9 @@ for your build system first. E.g for Maven :-
 ```xml
 <repositories>
 	<repository>
-		<id>opensource-snapshots</id>
-		<url>http://artifactory.javassh.com/opensource-snapshots</url>
-		<name>SSHTOOLS Open Source Snapshots</name>
+		<id>opensource-releases</id>
+		<url>http://artifactory.javassh.com/opensource-releases</url>
+		<name>SSHTOOLS Open Source Releases</name>
 	</repository>
 </repositories>
 ```
