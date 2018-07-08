@@ -30,7 +30,7 @@ from central too.
 	<dependency>
 		<groupId>com.sshtools</groupId>
 		<artifactId>icon-generator-swt</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 	</dependency>
 </dependencies>
 ```
