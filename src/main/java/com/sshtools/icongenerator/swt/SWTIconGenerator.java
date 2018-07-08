@@ -1,5 +1,6 @@
 package com.sshtools.icongenerator.swt;
 
+import org.eclipse.swt.graphics.Device;
 import org.eclipse.swt.graphics.GC;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
@@ -16,12 +17,19 @@ public class SWTIconGenerator implements IconGenerator<Image> {
 
 	@Override
 	public Image generate(IconBuilder builder, Object... args) {
-		final Display display = args.length == 0 ? Display.getCurrent() : (Display)args[0];
-		SWTIconCanvas ic = new SWTIconCanvas(builder, display);
-		Image img = new Image(display, (int)builder.width(), (int)builder.height());
-		GC gc = new GC(img);
-		ic.draw(gc);
+		final Device display = args.length == 0 ? Display.getCurrent() : (Device) args[0];
+		Image img = new Image(display, (int) builder.width(), (int) builder.height());
+		new SWTIconCanvas(builder, display).draw(new GC(img));
 		return img;
 	}
 
+	@Override
+	public boolean isValid() {
+		try {
+			getClass().getClassLoader().loadClass("org.eclipse.swt.graphics.Image");
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
 }

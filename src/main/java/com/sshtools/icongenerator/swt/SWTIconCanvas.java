@@ -9,6 +9,7 @@ import java.net.URL;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Device;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.GC;
@@ -35,7 +36,7 @@ public class SWTIconCanvas {
 	private int fixedFontSize;
 	private boolean bold;
 
-	private Display display;
+	private Device display;
 	private Color paint;
 
 	private IconShape shape;
@@ -44,7 +45,7 @@ public class SWTIconCanvas {
 
 	private int border;
 
-	public SWTIconCanvas(IconBuilder builder, Display display) {
+	public SWTIconCanvas(IconBuilder builder, Device display) {
 		this.display = display;
 
 		bounds = new Rectangle(0, 0, (int) builder.width(), (int) builder.height());
